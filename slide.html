@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i=0;
+        var img=['mobiles.png','model_1.jpg','model_2.jpg'];
+        // var time=3000;
+
+        // img[0]='mobiles.png';
+        // img[1]='model_1.jpg';
+        // img[2]='model_2.jpg';
+
+
+        function change(){
+            document.slide.src=img[i];
+            if(i<img.length -1){
+                 i++;
+            }
+            else{
+                i=0;
+            }
+            setTimeout("change()",2000);
+        }
+        window.onload=change;
+    </script>
+    <img name="slide" alt="" width="400" height="400">
+</body>
+</html>
